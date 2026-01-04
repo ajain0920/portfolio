@@ -100,24 +100,23 @@
 									</div>
 								</form>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Send Message" onclick="sendMail()" /></li>
 								</ul>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
 									<li>
 										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
+										Gurugram, Harayana 122004<br />
+										India
 									</li>
 									<li>
 										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
+										+91-9899296369
 									</li>
 									<li>
 										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
+										<a href="#">abhinavjain.0920@gmail.com</a>
 									</li>
 								</ul>
 							</div>
@@ -466,6 +465,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function sendMail() {
+					var subject = document.getElementById('name').value;
+					var body = document.getElementById('message').value;
+					var mailtoLink = 'mailto:abhinavjain.0920@gmail.com?Subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+					window.location.href = mailtoLink;
+				}
+			</script>
 
 	</body>
 </html>
